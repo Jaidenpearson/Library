@@ -1,29 +1,58 @@
 body {
     font-family: sans-serif;
-}
-
-div {
-    border-color: red;
-    border-width: 3px;
+    background-color: black;
 }
 
 .main-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    height: 98vh;
+    width: 98vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 2fr 5fr;
 }
 
+
 .header {
-    grid-column: 1, 5;
-    grid-row: 1, 2;
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    justify-self: center;
+    background-color: rgb(249,246,237);
+    width: 100%;
+
 }
 
 .hero {
-    grid-column: 1, 3;
-    grid-row: 2, 5;
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+    background-image: url(mountains.avif);
+    background-repeat:inherit;
+    
 }
 
-.footer{
-    grid-column: 1, 5;
-    grid-row: 4, 5;
+.bookLibrary {
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+    background-color: rgb(95,152,154);
+}
+
+.formContainer {
+    background-color: rgb(178,219,219);
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+#form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    padding: 1em;
+}
+
+.formItems {
+    display: grid;
+    justify-content: flex-start;
+    padding: 7px;
 }
